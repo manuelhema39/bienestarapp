@@ -44,11 +44,6 @@ cursor:pointer;
 body {
   color: rgb(var(--foreground-rgb));
   background-color: #742626;
-  /*
-    
-  display: flex;
-  justify-content: center;
-  align-items: center;*/
 }
 
 .font-bold{
@@ -57,4 +52,18 @@ body {
   color: white;
 }
 
+
+.espacios{
+  margin:5px;
+  padding: 5px;
+  text-align: left;
+  background-color: white;
+}
+
+.espaciosDos{
+  margin:5px;
+  padding: 5px;
+  text-align:right;
+   background-color: white;
+}
 

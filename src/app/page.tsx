@@ -1,5 +1,6 @@
 'use client'
 import Link from "next/link"
+import CasillaVerificacion from "./componentes/Casilla";
 import React, { useState, useEffect } from 'react';
 
 const misTareas=[];
@@ -15,13 +16,32 @@ export default function Home() {
         const Lista=document.getElementById("ListaTareas");
        // console.log(misTareas)
         if(count!==0){
-           
-            const li=document.createElement('li');
+            const divTareas=document.getElementById("contenedorTareas");
+            const divContenedorVerificacion=document.createElement("div");
+            divContenedorVerificacion.className="espaciosDos";
+            const casillaVerificacion=document.createElement("input");
+            casillaVerificacion.type="checkbox";
+            casillaVerificacion.className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500";
+            divContenedorVerificacion.appendChild(casillaVerificacion);
+            const divContenedorNombreTarea=document.createElement("div");
+            const textNode=document.createTextNode(miInput.value);
+            divContenedorNombreTarea.appendChild(textNode);
+            divContenedorNombreTarea.className="espacios";
+            divTareas.appendChild(divContenedorVerificacion);
+            divTareas?.appendChild(divContenedorNombreTarea);
+            miInput.value="";
+           /* const li=document.createElement('li');
+            const li1=document.createElement('li');
             li.className="miLi flex space-x-3 items-center";
             let textNode=document.createTextNode(miInput.value);
             li.appendChild(textNode)
-            Lista.appendChild(li)
-            miInput.value=""
+            const casillaVerificacion=document.createElement('input');
+            casillaVerificacion.type="checkbox";
+            casillaVerificacion.className="appearance-none checked:bg-blue-500 ...";
+            li1.appendChild(casillaVerificacion);
+            Lista.appendChild(li);
+            Lista.appendChild(li1);
+            miInput.value=""*/
         }
     });
 
@@ -39,11 +59,8 @@ export default function Home() {
             }}>
             Agregar Tarea
             </button>
-          </div>
-
-          <div className="relative">
-            <ul role="list" className="my-7" id="ListaTareas">
-            </ul>
+          </div>                                
+          <div id="contenedorTareas" className="grid grid-cols-2 gap-1">
           </div>
         </div>
       </div>
