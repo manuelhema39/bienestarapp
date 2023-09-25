@@ -12,8 +12,10 @@ export default function Home() {
       listaTareas.push({"id":listaTareas.length,"Tarea":selInput.value});
       console.log(listaTareas)
       const Lista=document.getElementById("ListaTareas");
+      Lista.className="list-none md:list-disc";
       const claves=Object.keys(listaTareas);
       const li=document.createElement('li');
+
       const p=document.createElement('p');
       p.appendChild(document.createTextNode(selInput.value));
       Lista.appendChild(li).appendChild(p);
