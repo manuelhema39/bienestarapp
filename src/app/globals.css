@@ -16,12 +16,45 @@
   }
 }
 
+.centrar{
+  width: 100%;
+  background-color: #742626;
+  justify-items: center;
+  text-align: center;
+}
+
+
+.miLi,
+.my-7{
+  background-color: rgb(141, 132, 11);
+  /*border: 1px solid;*/
+  border-color: rgb(255, 255, 255);
+  padding: 2px;
+  margin: 2px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.miLi,
+.my-7:hover{
+cursor:pointer;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #742626;
+  /*
+    
+  display: flex;
+  justify-content: center;
+  align-items: center;*/
 }
+
+.font-bold{
+  margin: 10px;
+  padding: 10px;
+  color: white;
+}
+
+
