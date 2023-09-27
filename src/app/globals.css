@@ -52,18 +52,32 @@ body {
   color: white;
 }
 
-
+.centrarDiv{
+  margin:5px;
+  padding: 5px;
+  text-align:center;
+  background-color: white;
+}
 .espacios{
   margin:5px;
   padding: 5px;
-  text-align: left;
+  text-align:right;
   background-color: white;
 }
+
+.complementoBoton{
+  width: 80px;
+  height: 20px;
+  font-size:15px;
+}
+
 
 .espaciosDos{
   margin:5px;
   padding: 5px;
-  text-align:right;
+  text-align:left;
    background-color: white;
 }
+
+
 
