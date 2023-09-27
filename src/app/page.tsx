@@ -1,62 +1,19 @@
 'use client'
 import Link from "next/link"
-import CasillaVerificacion from "./componentes/Casilla";
 import React, { useState, useEffect } from 'react';
-
-const misTareas=[];
 
 export default function Home() {
   const [nombreTarea,setNombreTarea]=useState("");
   const [listaTarea, setListaTarea] = useState([]);
   const [Llaves,setLlaves]=useState(0);
-/********************************  */
  
 const nuevaLlave=()=>{
-  console.log("click");
   setLlaves(Llaves+1);
   listaTarea.push({"Id":Llaves,"Nombre":nombreTarea});
   setNombreTarea("");
-  //setLlaves(Llaves+1);
+ 
 }
 
-useEffect(() => {
-  console.log(listaTarea)
-
-})
-
-
-
-
-/********************************* */
- /* const [Tarea, setTarea] = useState();
-  const [count,setCount]=useState(0)
-  const miInput=document.getElementById("InputTarea");
-*/
-   /* useEffect(() => {
-        const miInput=document.getElementById("InputTarea");
-        const Lista=document.getElementById("ListaTareas");
-       // console.log(misTareas)
-        if(count!==0){
-            const divTareas=document.getElementById("contenedorTareas");
-            const divContenedorVerificacion=document.createElement("div");
-            divContenedorVerificacion.className="espaciosDos";
-            const casillaVerificacion=document.createElement("input");
-            casillaVerificacion.type="checkbox";
-            casillaVerificacion.className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500";
-            divContenedorVerificacion.appendChild(casillaVerificacion);
-            const divContenedorNombreTarea=document.createElement("div");
-            const textNode=document.createTextNode(miInput.value);
-            divContenedorNombreTarea.appendChild(textNode);
-            divContenedorNombreTarea.className="espacios";
-            divTareas.appendChild(divContenedorVerificacion);
-            divTareas.appendChild(divContenedorNombreTarea);
-            miInput.value="";
-         
-        }
-    });*/
-
-
-//e => setNombreTarea(e.target.value)
   return (
     <div className="centrar">
         <h1 className="font-bold uppercase ...">Listas de Tareas</h1>
@@ -70,7 +27,7 @@ useEffect(() => {
           
             {
               
-              listaTarea.map(Tarea=>(
+              listaTarea.map((Tarea:any)=>(
                   <div id="contenedorTareas" className="grid grid-cols-4 gap-1" key={Tarea.Id}>
                     <div className="espacios">
                       <input id="default-checkbox" type="checkbox"/>
